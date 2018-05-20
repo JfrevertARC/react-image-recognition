@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: rgb(9,10,10);
+background: linear-gradient(90deg, rgba(9,10,10,1) 0%, rgba(33,56,104,1) 39%, rgba(70,252,239,1) 100%);
+}
+
+button {
+  cursor: pointer;
+}
