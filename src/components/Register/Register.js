@@ -19,27 +19,6 @@ class Register extends React.Component  {
             this.setState({name: event.target.value})
         }
 
-        // onSubmitSignin = () => {
-        //     fetch('http://localhost:3001/signin', {
-        //         method: 'post',
-        //         headers: {'Content-Type': 'application/json'},
-        //         body: JSON.stringify({
-        //             email: this.state.email,
-        //             password: this.state.password,
-        //             name: this.state.name
-        //         })
-        //     }).then(response => response.json())
-        //         .then(user => {
-        //             if (user) {
-        //                 this.props.loadUser(user)
-        //                 this.props.onRouteChange('home');
-        //             } else {
-        //                 alert("Username or password were incorrect.")
-        //             }
-        //         })
-        // }
-
-
         onSubmitRegistration = () => {
             fetch('http://localhost:3001/register', {
                 method: 'post',
@@ -51,7 +30,7 @@ class Register extends React.Component  {
                 })
             }).then(response => response.json())
                 .then(user => {
-                    if (user) {
+                    if (user.id) {
                         this.props.loadUser(user)
                         this.props.onRouteChange('home');
                     } else {
